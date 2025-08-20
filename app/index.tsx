@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import Field from "../src/components/Field";
 import params from "../src/params";
 
 
@@ -10,9 +11,18 @@ export default function Index() {
       <Text style={Styles.welcome}> Inciciando o Mines! </Text>
       <Text style={Styles.instructions}>Tamanho da grade:
         {params.getRowsAmount()}x{params.getColumnsAmount()}</Text>
+
+      <Field />
+      <Field opened />
+      <Field opened nearMines={1} />
+      <Field opened nearMines={2} />
+      <Field opened nearMines={3} />
+      <Field opened nearMines={6} />
+      <Field mined />
+      <Field mined opened />
+      <Field mined opened exploded />
     </View>
   )
-
 }
 
 
